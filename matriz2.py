@@ -8,7 +8,7 @@ def pedirTamaño(i, j):
     columnas = j
 
 
-def leerValor():
+def leerValor(mensaje):
     while True:
         try:
             valor = int(input("Dime un valor númerico: "))
@@ -25,3 +25,23 @@ def agregarElemento():
 pedirTamaño(2, 2)
 print(filas, columnas)
 agregarElemento()
+
+def menu():
+    print("""
+1. Asignar tamano
+2. Agregar elemento
+3. Salir
+""")
+    op = leerValor("Opcion:")
+    return op
+def main():
+    while True:
+        op = menu()
+        if op == 1:
+            pedirTamaño()
+        elif op == 2:
+            agregarElemento()
+        elif op == 3:
+            print("see yaa....")
+            break
+        
